@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cheese Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<nav>
+  <div class="navwrap">
+    <div class="brand">🧀 <span>The Cheese Guide</span></div>
+    <div class="navlinks">
+      <a href="#overview">Overview</a>
+      <a href="#milk">Milk &amp; Origin</a>
+      <a href="#process">How It's Made</a>
+      <a href="#directory">Directory</a>
+      <a href="#spectrum">Texture Spectrum</a>
+      <a href="#glossary">Glossary</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow">A Field Guide</span>
+      <h1>The Cheese Guide</h1>
+      <p class="lead">Twenty cheeses, from fresh curds to aged wheels — where each one comes from, what milk shapes it, and how it's best enjoyed.</p>
+      <div class="statrow">
+        <div class="stat"><b>20</b><span>Cheeses profiled</span></div>
+        <div class="stat"><b>4</b><span>Milk sources</span></div>
+        <div class="stat"><b>6</b><span>Texture families</span></div>
+        <div class="stat"><b>12+</b><span>Countries of origin</span></div>
+      </div>
+    </div>
+    <div class="hero-svg">
+      <svg viewBox="0 0 320 300" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="160" cy="255" rx="120" ry="16" fill="var(--cream-2)"/>
+        <g>
+          <path d="M60 230 L100 90 L220 90 L260 230 Z" fill="var(--gold)" stroke="var(--gold-deep)" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M60 230 L100 90 L220 90 L260 230 Z" fill="none" stroke="var(--gold-deep)" stroke-width="3"/>
+          <circle cx="130" cy="150" r="7" fill="var(--rind)"/>
+          <circle cx="175" cy="185" r="9" fill="var(--rind)"/>
+          <circle cx="150" cy="210" r="5" fill="var(--rind)"/>
+          <circle cx="195" cy="140" r="6" fill="var(--rind)"/>
+          <circle cx="110" cy="195" r="4" fill="var(--rind)"/>
+          <circle cx="205" cy="205" r="6" fill="var(--rind)"/>
+        </g>
+        <g transform="translate(215,60) rotate(18)">
+          <path d="M0 0 L46 8 L38 42 L-8 34 Z" fill="var(--wax)" stroke="var(--wax-soft)" stroke-width="2"/>
+          <circle cx="18" cy="18" r="3" fill="var(--rind)"/>
+          <circle cx="30" cy="24" r="2.4" fill="var(--rind)"/>
+        </g>
+        <g transform="translate(30,150) rotate(-10)">
+          <ellipse cx="20" cy="20" rx="26" ry="18" fill="var(--rind)" stroke="var(--line)" stroke-width="2"/>
+          <ellipse cx="20" cy="20" rx="26" ry="18" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="2 4"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section id="overview">
+  <div class="wrap">
+    <span class="section-tag">Why It Matters</span>
+    <h2>More Than Just a Topping</h2>
+    <p class="section-intro">Cheese is one of humanity's oldest crafted foods — a product of patience, chemistry, and regional tradition that turns simple milk into thousands of distinct flavors and textures.</p>
+    <div class="importance-grid">
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 14c0-4 3.5-9 8-9s8 5 8 9-3.5 6-8 6-8-2-8-6Z" stroke="var(--gold-deep)" stroke-width="1.6"/><circle cx="10" cy="12" r="1.2" fill="var(--gold-deep)"/><circle cx="14" cy="15" r="1" fill="var(--gold-deep)"/></svg>
+        <h4>Flavor &amp; Texture</h4>
+        <p>Ranges from mild and milky to sharp and pungent, shaped by milk, culture, and time.</p>
+      </div>
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h4>Culinary Versatility</h4>
+        <p>Melts, grates, spreads, or crumbles — adapting to almost any dish or cuisine.</p>
+      </div>
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="var(--gold-deep)" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.5 4 5.5 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.5-4-9s1.5-6.5 4-9Z" stroke="var(--gold-deep)" stroke-width="1.4"/></svg>
+        <h4>Cultural Heritage</h4>
+        <p>Each cheese carries the history, geography, and tradition of the place it comes from.</p>
+      </div>
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 1 1-12 0c0-3.5 3-7 6-11Z" stroke="var(--gold-deep)" stroke-width="1.6"/><path d="M12 11v6M9 14h6" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h4>Nutritional Value</h4>
+        <p>A concentrated source of protein and calcium, valuable as part of a balanced diet.</p>
+      </div>
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9" stroke="var(--gold-deep)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h4>Craftsmanship</h4>
+        <p>From curdling to aging, cheesemaking blends science with generations of hands-on skill.</p>
+      </div>
+      <div class="imp-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.3L12 16.9 6.4 20.1l1.4-6.3L3 9.5l6.4-.6L12 3Z" stroke="var(--gold-deep)" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <h4>Universal Appeal</h4>
+        <p>Enjoyed everywhere — from everyday snacking to the finest dining tables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="milk" style="background:var(--cream-2);">
+  <div class="wrap">
+    <span class="section-tag">The Source</span>
+    <h2>Milk &amp; Origin</h2>
+    <p class="section-intro">Every cheese begins with a milk source, and that milk shapes everything downstream — fat content, flavor intensity, and which cheeses it's suited to become.</p>
+    <div class="milk-grid">
+      <div class="milk-card">
+        <span class="tag">Most common</span>
+        <h4>🐄 Cow's Milk</h4>
+        <div class="fat">~3.5–4% fat · mild, sweet base</div>
+        <p style="font-size:.86rem;">The default milk for the majority of the world's cheeses — mild and versatile, taking well to both fresh and long-aged styles.</p>
+        <ul><li>Mozzarella, Cheddar, Gouda</li><li>Brie, Camembert, Parmesan</li><li>Cream Cheese, Monterey Jack</li></ul>
+      </div>
+      <div class="milk-card">
+        <span class="tag">Rich &amp; complex</span>
+        <h4>🐐 Goat's Milk</h4>
+        <div class="fat">~4% fat · brighter, tangier</div>
+        <p style="font-size:.86rem;">Lower in cholesterol than cow's milk, with a distinct tang; most goat cheeses are eaten fresh or lightly aged.</p>
+        <ul><li>Chèvre (Goat Cheese)</li><li>Some Feta blends</li><li>Some Halloumi blends</li></ul>
+      </div>
+      <div class="milk-card">
+        <span class="tag">High fat, savory</span>
+        <h4>🐑 Sheep's Milk</h4>
+        <div class="fat">~6–7% fat · dense, nutty, savory</div>
+        <p style="font-size:.86rem;">Higher in fat and protein than cow's milk, giving sheep's-milk cheeses their characteristic richness and depth.</p>
+        <ul><li>Feta, Manchego</li><li>Roquefort</li><li>Traditional Ricotta</li></ul>
+      </div>
+      <div class="milk-card">
+        <span class="tag">Prized, delicate</span>
+        <h4>🐃 Buffalo Milk</h4>
+        <div class="fat">~7–8% fat · silky, milky-sweet</div>
+        <p style="font-size:.86rem;">Higher fat content produces an especially creamy, luxurious texture — the gold standard for certain fresh cheeses.</p>
+        <ul><li>Mozzarella di Bufala</li><li>Paneer (regional)</li><li>Burrata (occasionally)</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="section-tag">From Farm to Wheel</span>
+    <h2>How Cheese Is Made</h2>
+    <p class="section-intro">Nearly every cheese — fresh or aged, soft or hard — follows the same five-stage journey. What changes from one cheese to the next is the milk, the culture, the cutting, and the time.</p>
+
+    <div class="process-flow">
+      <svg viewBox="0 0 980 260" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:980px; display:block; margin:0 auto;">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0 0L8 4L0 8Z" fill="var(--gold-deep)"/>
+          </marker>
+        </defs>
+        <line x1="100" y1="80" x2="880" y2="80" stroke="var(--line)" stroke-width="2" stroke-dasharray="1 6"/>
+
+        <!-- Step 1: Milk -->
+        <g transform="translate(60,20)">
+          <circle cx="40" cy="60" r="40" fill="var(--rind)" stroke="var(--gold)" stroke-width="2.5"/>
+          <rect x="33" y="22" width="14" height="6" rx="1.5" fill="var(--gold-deep)"/>
+          <path d="M34 26h12v8c5 4 8 10 8 18v26a6 6 0 0 1-6 6H32a6 6 0 0 1-6-6V52c0-8 3-14 8-18Z" fill="none" stroke="var(--gold-deep)" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="26" y1="58" x2="54" y2="58" stroke="var(--gold)" stroke-width="2"/>
+          <text x="40" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="14" font-weight="700" fill="var(--ink)">1. Milk</text>
+          <text x="40" y="146" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">Cow, goat, sheep</text>
+          <text x="40" y="160" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">or buffalo, pasteurized</text>
+          <text x="40" y="174" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">or raw</text>
+        </g>
+
+        <!-- Step 2: Culture & Rennet -->
+        <g transform="translate(230,20)">
+          <circle cx="40" cy="60" r="40" fill="var(--rind)" stroke="var(--gold)" stroke-width="2.5"/>
+          <circle cx="28" cy="52" r="4" fill="var(--gold-deep)"/>
+          <circle cx="48" cy="45" r="3" fill="var(--gold-deep)"/>
+          <circle cx="52" cy="65" r="4.5" fill="var(--gold-deep)"/>
+          <circle cx="32" cy="70" r="3" fill="var(--gold-deep)"/>
+          <text x="40" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="14" font-weight="700" fill="var(--ink)">2. Culture &amp; Rennet</text>
+          <text x="40" y="146" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">Bacterial cultures acidify</text>
+          <text x="40" y="160" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">the milk; rennet</text>
+          <text x="40" y="174" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">coagulates it</text>
+        </g>
+
+        <!-- Step 3: Curd -->
+        <g transform="translate(400,20)">
+          <circle cx="40" cy="60" r="40" fill="var(--rind)" stroke="var(--gold)" stroke-width="2.5"/>
+          <path d="M14 46c0 20 12 32 26 32s26-12 26-32" fill="none" stroke="var(--gold-deep)" stroke-width="2.5"/>
+          <ellipse cx="40" cy="46" rx="26" ry="7" fill="var(--rind)" stroke="var(--gold-deep)" stroke-width="2.2"/>
+          <circle cx="30" cy="50" r="5" fill="var(--gold)"/>
+          <circle cx="43" cy="54" r="6" fill="var(--gold-deep)"/>
+          <circle cx="51" cy="46" r="4" fill="var(--gold)"/>
+          <circle cx="35" cy="58" r="4" fill="var(--gold-deep)"/>
+          <text x="40" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="14" font-weight="700" fill="var(--ink)">3. Curd Formation</text>
+          <text x="40" y="146" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">Curds are cut, cooked,</text>
+          <text x="40" y="160" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">and separated from</text>
+          <text x="40" y="174" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">the liquid whey</text>
+        </g>
+
+        <!-- Step 4: Drain & Press -->
+        <g transform="translate(570,20)">
+          <circle cx="40" cy="60" r="40" fill="var(--rind)" stroke="var(--gold)" stroke-width="2.5"/>
+          <line x1="40" y1="26" x2="40" y2="34" stroke="var(--gold-deep)" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="28" y="34" width="24" height="8" rx="2" fill="var(--gold-deep)"/>
+          <rect x="24" y="46" width="32" height="24" rx="4" fill="none" stroke="var(--gold-deep)" stroke-width="2.5"/>
+          <path d="M29 50v16M35 50v16M40 50v16M45 50v16M51 50v16" stroke="var(--gold-deep)" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/>
+          <path d="M34 74q3 6-1 10q-5-3-2-10Z" fill="var(--gold)"/>
+          <path d="M47 76q3 6-1 10q-5-3-2-10Z" fill="var(--gold)"/>
+          <text x="40" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="14" font-weight="700" fill="var(--ink)">4. Drain &amp; Press</text>
+          <text x="40" y="146" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">Whey drains off; curds</text>
+          <text x="40" y="160" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">are salted, shaped, and</text>
+          <text x="40" y="174" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">pressed into form</text>
+        </g>
+
+        <!-- Step 5: Ripen -->
+        <g transform="translate(740,20)">
+          <circle cx="40" cy="60" r="40" fill="var(--rind)" stroke="var(--gold)" stroke-width="2.5"/>
+          <path d="M22 66 L30 34 L50 34 L58 66 Z" fill="var(--gold-deep)"/>
+          <circle cx="36" cy="52" r="1.8" fill="var(--rind)"/>
+          <circle cx="44" cy="58" r="1.8" fill="var(--rind)"/>
+          <text x="40" y="128" text-anchor="middle" font-family="Fraunces, serif" font-size="14" font-weight="700" fill="var(--ink)">5. Ripen (Affinage)</text>
+          <text x="40" y="146" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">Aged days to years,</text>
+          <text x="40" y="160" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">developing final</text>
+          <text x="40" y="174" text-anchor="middle" font-family="Karla, sans-serif" font-size="10.5" fill="var(--ink-soft)">flavor and texture</text>
+        </g>
+
+        <line x1="145" y1="80" x2="222" y2="80" stroke="var(--gold-deep)" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="315" y1="80" x2="392" y2="80" stroke="var(--gold-deep)" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="485" y1="80" x2="562" y2="80" stroke="var(--gold-deep)" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="655" y1="80" x2="732" y2="80" stroke="var(--gold-deep)" stroke-width="2" marker-end="url(#arrow)"/>
+      </svg>
+    </div>
+
+    <div class="importance-grid" style="margin-top:36px;">
+      <div class="imp-card">
+        <h4>Fresh cheeses</h4>
+        <p>Skip ripening almost entirely — eaten within days (Mozzarella, Ricotta, Cream Cheese, Paneer).</p>
+      </div>
+      <div class="imp-card">
+        <h4>Bloomy &amp; washed rinds</h4>
+        <p>Ripen from the outside in over 2–6 weeks, with molds or washes actively shaping flavor (Brie, Camembert).</p>
+      </div>
+      <div class="imp-card">
+        <h4>Semi-hard &amp; hard cheeses</h4>
+        <p>Pressed firmer to expel more moisture, then aged for months to years (Gouda, Cheddar, Parmesan).</p>
+      </div>
+      <div class="imp-card">
+        <h4>Blue cheeses</h4>
+        <p>Pierced with needles during aging so air reaches the interior, letting Penicillium mold veins develop throughout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="directory">
+  <div class="wrap">
+    <span class="section-tag">The Directory</span>
+    <h2>20 Cheeses, A–Z by Family</h2>
+    <p class="section-intro">Filter by texture family to browse, or tap any card to see its origin, milk source, flavor, and best use on the menu.</p>
+
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All Cheeses</button>
+      <button class="filter-btn" data-filter="fresh">Fresh &amp; Soft</button>
+      <button class="filter-btn" data-filter="bloomy">Bloomy Rind</button>
+      <button class="filter-btn" data-filter="brined">Brined &amp; Grilling</button>
+      <button class="filter-btn" data-filter="semihard">Semi-Hard</button>
+      <button class="filter-btn" data-filter="hard">Hard &amp; Aged</button>
+      <button class="filter-btn" data-filter="blue">Blue-Veined</button>
+    </div>
+
+    <div class="cheese-grid" id="cheeseGrid">
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><circle cx="18" cy="20" r="2.4" fill="var(--gold)"/><circle cx="28" cy="26" r="2" fill="var(--gold)"/><circle cx="22" cy="30" r="1.6" fill="var(--gold)"/></svg>
+          <div class="card-title-wrap">
+            <h4>Mozzarella</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow / Buffalo</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Soft, fresh, elastic when melted</div>
+          <div class="row"><b>Flavor:</b> Mild and milky, with a clean dairy sweetness</div>
+          <div class="row"><b>Best used in:</b> Pizzas, lasagna, pasta bakes, caprese salad, sandwiches</div>
+          <div class="fact">💡 The buffalo-milk version, mozzarella di bufala, is a protected specialty from the Campania region near Naples.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M16 24a8 8 0 0 1 16 0" stroke="var(--gold)" stroke-width="2" fill="none"/></svg>
+          <div class="card-title-wrap">
+            <h4>Burrata</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Mozzarella shell filled with cream and soft curd</div>
+          <div class="row"><b>Flavor:</b> Rich, luscious, buttery</div>
+          <div class="row"><b>Best used in:</b> Antipasti platters, caprese-style starters, drizzled with olive oil and torn into salads</div>
+          <div class="fact">💡 Created in Puglia as a way to use up mozzarella scraps and cream — nothing went to waste.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M16 30c2-8 14-8 16 0" stroke="var(--gold)" stroke-width="2" fill="none"/></svg>
+          <div class="card-title-wrap">
+            <h4>Ricotta</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow / Sheep Whey</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Light, grainy-soft, spoonable</div>
+          <div class="row"><b>Flavor:</b> Mildly sweet, delicate</div>
+          <div class="row"><b>Best used in:</b> Lasagna, ravioli filling, cannoli, baked cheesecakes, desserts</div>
+          <div class="fact">💡 The name means "recooked" — it's traditionally made from the whey left over after making other cheeses.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="28" rx="6" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M16 24h16M16 30h10" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="card-title-wrap">
+            <h4>Feta</h4>
+            <div class="card-meta"><span>🇬🇷 Greece</span><span class="badge">Sheep / Goat</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Firm yet crumbly, brined</div>
+          <div class="row"><b>Flavor:</b> Salty and tangy</div>
+          <div class="row"><b>Best used in:</b> Greek salad, spanakopita, Mediterranean mezze, appetizer platters</div>
+          <div class="fact">💡 Under EU law, only cheese made in Greece from sheep and goat milk can be labeled "Feta."</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="10" y="12" width="28" height="24" rx="4" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M16 20h16M16 26h16" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Paneer</h4>
+            <div class="card-meta"><span>🇮🇳 India</span><span class="badge">Cow / Buffalo</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Firm, does not melt when cooked</div>
+          <div class="row"><b>Flavor:</b> Neutral, milky</div>
+          <div class="row"><b>Best used in:</b> Paneer tikka, palak paneer, curries, kebabs — a banquet staple</div>
+          <div class="fact">💡 Made by curdling milk with an acid (lemon juice or vinegar) rather than rennet, and pressing out the whey.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M14 24h20" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="card-title-wrap">
+            <h4>Cream Cheese</h4>
+            <div class="card-meta"><span>🇺🇸 USA</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Soft, smooth, spreadable</div>
+          <div class="row"><b>Flavor:</b> Mild and creamy</div>
+          <div class="row"><b>Best used in:</b> Cheesecakes, bagels, canapés, frostings, dips</div>
+          <div class="fact">💡 Invented in New York in 1872; the Philadelphia brand made it a household name worldwide.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M16 28c4 4 12 4 16 0" stroke="var(--gold)" stroke-width="2" fill="none"/></svg>
+          <div class="card-title-wrap">
+            <h4>Mascarpone</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Ultra-smooth, thick like whipped cream</div>
+          <div class="row"><b>Flavor:</b> Rich and buttery</div>
+          <div class="row"><b>Best used in:</b> Tiramisu, dessert fillings, pasta sauces</div>
+          <div class="fact">💡 Technically not a true cheese — it's made by curdling cream with acid, not rennet.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="fresh">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="18" ry="14" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M14 24h20" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Goat Cheese (Chèvre)</h4>
+            <div class="card-meta"><span>🇫🇷 France</span><span class="badge">Goat</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Creamy fresh log to firmer aged wheel</div>
+          <div class="row"><b>Flavor:</b> Tangy, earthy</div>
+          <div class="row"><b>Best used in:</b> Salads, tarts, crostini, gourmet appetizers, fine dining plates</div>
+          <div class="fact">💡 Ranges widely by age — a fresh log tastes nothing like a rind-aged crottin.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="bloomy">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--ink-soft)" stroke-width="2"/><circle cx="24" cy="24" r="14" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 3"/></svg>
+          <div class="card-title-wrap">
+            <h4>Brie</h4>
+            <div class="card-meta"><span>🇫🇷 France</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Soft with a bloomy white edible rind</div>
+          <div class="row"><b>Flavor:</b> Buttery, mild, slightly earthy</div>
+          <div class="row"><b>Best used in:</b> Cheese platters, baked brie, fine dining courses</div>
+          <div class="fact">💡 Known as the "Queen of Cheeses" — it hails from the Brie region just east of Paris.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="bloomy">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--ink-soft)" stroke-width="2"/><circle cx="24" cy="24" r="14" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 3"/><circle cx="24" cy="24" r="6" fill="var(--cream-2)"/></svg>
+          <div class="card-title-wrap">
+            <h4>Camembert</h4>
+            <div class="card-meta"><span>🇫🇷 France</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Soft, bloomy rind, runnier when ripe</div>
+          <div class="row"><b>Flavor:</b> Rich, earthy, more pungent than Brie</div>
+          <div class="row"><b>Best used in:</b> Baked whole, cheese boards, paired with crusty bread</div>
+          <div class="fact">💡 Normandy's answer to Brie — smaller wheels, a stronger character.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="brined">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="10" y="14" width="28" height="20" rx="3" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><path d="M10 24h28" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Halloumi</h4>
+            <div class="card-meta"><span>🇨🇾 Cyprus</span><span class="badge">Sheep / Goat</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Semi-hard, brined, springy and squeaky</div>
+          <div class="row"><b>Flavor:</b> Salty, tangy</div>
+          <div class="row"><b>Best used in:</b> Grilling, pan-frying, Mediterranean mezze boards, salads</div>
+          <div class="fact">💡 Its unusually high melting point means it holds its shape beautifully on a hot grill.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="semihard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><path d="M10 34 L16 12 L32 12 L38 34 Z" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Gouda</h4>
+            <div class="card-meta"><span>🇳🇱 Netherlands</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Smooth, semi-hard</div>
+          <div class="row"><b>Flavor:</b> Nutty, slightly sweet, caramel notes with age</div>
+          <div class="row"><b>Best used in:</b> Sandwiches, cheese platters, breakfast buffets</div>
+          <div class="fact">💡 Named after the Dutch city of Gouda, historically the market town where the cheese was traded.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="semihard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><path d="M10 34 L16 12 L32 12 L38 34 Z" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/><circle cx="20" cy="22" r="2" fill="var(--cream-2)"/><circle cx="27" cy="27" r="2.4" fill="var(--cream-2)"/><circle cx="24" cy="18" r="1.6" fill="var(--cream-2)"/></svg>
+          <div class="card-title-wrap">
+            <h4>Swiss (Emmental)</h4>
+            <div class="card-meta"><span>🇨🇭 Switzerland</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Semi-hard with characteristic large holes ("eyes")</div>
+          <div class="row"><b>Flavor:</b> Mild, nutty</div>
+          <div class="row"><b>Best used in:</b> Sandwiches, burgers, fondue, gratins</div>
+          <div class="fact">💡 The holes form from carbon dioxide bubbles released by bacteria during fermentation.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="semihard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><path d="M10 34 L16 12 L32 12 L38 34 Z" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Gruyère</h4>
+            <div class="card-meta"><span>🇨🇭 Switzerland</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Dense, semi-hard to firm</div>
+          <div class="row"><b>Flavor:</b> Earthy, nutty, complex — more intense with age</div>
+          <div class="row"><b>Best used in:</b> Fondue, French onion soup, gratins, quiche</div>
+          <div class="fact">💡 A protected AOC cheese and a cornerstone ingredient of classic French cuisine.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="semihard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/></svg>
+          <div class="card-title-wrap">
+            <h4>Provolone</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Semi-hard, smooth</div>
+          <div class="row"><b>Flavor:</b> Mild ("dolce") to sharp ("piccante"), depending on age</div>
+          <div class="row"><b>Best used in:</b> Paninis, pizzas, grilled sandwiches</div>
+          <div class="fact">💡 Sold in two classic styles — dolce (mild, aged 2–3 months) and piccante (sharp, aged much longer).</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="semihard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="10" y="12" width="28" height="24" rx="3" fill="var(--gold)" opacity=".85"/></svg>
+          <div class="card-title-wrap">
+            <h4>Monterey Jack</h4>
+            <div class="card-meta"><span>🇺🇸 USA</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Semi-hard, melts easily</div>
+          <div class="row"><b>Flavor:</b> Mild and buttery</div>
+          <div class="row"><b>Best used in:</b> Mexican dishes, nachos, burgers, casseroles</div>
+          <div class="fact">💡 Developed in Monterey, California, in the 18th century by Franciscan missionaries.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="hard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="8" y="16" width="32" height="16" rx="2" fill="var(--gold-deep)"/><path d="M8 20h32M8 24h32M8 28h32" stroke="var(--rind)" stroke-width="1"/></svg>
+          <div class="card-title-wrap">
+            <h4>Manchego</h4>
+            <div class="card-meta"><span>🇪🇸 Spain</span><span class="badge">Sheep</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Firm, semi-hard to hard with a distinctive zigzag rind pattern</div>
+          <div class="row"><b>Flavor:</b> Nutty, tangy, buttery</div>
+          <div class="row"><b>Best used in:</b> Tapas boards, charcuterie, paired with membrillo (quince paste)</div>
+          <div class="fact">💡 Must come from Manchega sheep raised in Spain's La Mancha region to carry the name legally.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="hard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><rect x="8" y="16" width="32" height="16" rx="2" fill="var(--gold)"/><path d="M8 20h32M8 24h32M8 28h32" stroke="var(--rind)" stroke-width="1"/></svg>
+          <div class="card-title-wrap">
+            <h4>Cheddar</h4>
+            <div class="card-meta"><span>🇬🇧 England</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Semi-hard to hard, white or orange</div>
+          <div class="row"><b>Flavor:</b> Sharp and rich, intensifying with age</div>
+          <div class="row"><b>Best used in:</b> Burgers, sandwiches, omelets, sauces</div>
+          <div class="fact">💡 Named after the village of Cheddar in Somerset, England, where it was first made in local caves.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="hard">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><path d="M24 6 L40 18 L34 40 L14 40 L8 18 Z" fill="var(--gold-deep)"/></svg>
+          <div class="card-title-wrap">
+            <h4>Parmesan (Parmigiano-Reggiano)</h4>
+            <div class="card-meta"><span>🇮🇹 Italy</span><span class="badge">Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Hard, granular, aged</div>
+          <div class="row"><b>Flavor:</b> Strong, nutty, deeply umami</div>
+          <div class="row"><b>Best used in:</b> Grated over pasta, risotto, soups, and salads</div>
+          <div class="fact">💡 Aged a minimum of 12 months — premium wheels are often aged 24 to 36+ months.</div>
+        </div>
+      </details>
+
+      <details class="cheese-card" data-cat="blue">
+        <summary>
+          <svg class="card-icon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="var(--rind)" stroke="var(--blue-vein)" stroke-width="2"/><path d="M14 18c4 2 3 6 7 6s2-5 6-4 3 6 7 3" stroke="var(--blue-vein)" stroke-width="1.6" fill="none"/></svg>
+          <div class="card-title-wrap">
+            <h4>Blue Cheese Family</h4>
+            <div class="card-meta"><span>🇫🇷🇮🇹🇬🇧 France / Italy / England</span><span class="badge">Sheep / Cow</span></div>
+          </div>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="card-body">
+          <div class="row"><b>Texture:</b> Crumbly to creamy, veined with mold</div>
+          <div class="row"><b>Flavor:</b> Sharp, tangy, pungent</div>
+          <div class="row"><b>Best used in:</b> Salads, dressings, steak sauces, gourmet cheese boards</div>
+          <div class="row"><b>Key variants:</b> Roquefort (France, sheep), Gorgonzola (Italy, cow), Stilton (England, cow)</div>
+          <div class="fact">💡 The blue veins come from Penicillium mold cultures deliberately introduced during aging.</div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section id="spectrum" style="background:var(--cream-2);">
+  <div class="wrap">
+    <span class="section-tag">At A Glance</span>
+    <h2>The Texture Spectrum</h2>
+    <p class="section-intro">Cheeses fall along a spectrum from fresh and unaged to hard and long-matured — a useful mental map when building a cheese board or planning a menu.</p>
+    <div class="spectrum-wrap">
+      <svg viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:900px;">
+        <line x1="60" y1="90" x2="840" y2="90" stroke="var(--line)" stroke-width="3"/>
+        <line x1="60" y1="90" x2="840" y2="90" stroke="url(#grad)" stroke-width="3"/>
+        <defs>
+          <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="var(--rind)"/>
+            <stop offset="50%" stop-color="var(--gold)"/>
+            <stop offset="100%" stop-color="var(--gold-deep)"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Karla, sans-serif" font-size="13" fill="var(--ink)">
+          <circle cx="90" cy="90" r="7" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/>
+          <text x="90" y="60" text-anchor="middle" font-weight="700">Fresh</text>
+          <text x="90" y="120" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Mozzarella</text>
+          <text x="90" y="135" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Ricotta</text>
+
+          <circle cx="270" cy="90" r="7" fill="var(--rind)" stroke="var(--gold)" stroke-width="2"/>
+          <text x="270" y="60" text-anchor="middle" font-weight="700">Soft-Ripened</text>
+          <text x="270" y="120" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Brie</text>
+          <text x="270" y="135" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Camembert</text>
+
+          <circle cx="450" cy="90" r="7" fill="var(--gold)"/>
+          <text x="450" y="60" text-anchor="middle" font-weight="700">Semi-Hard</text>
+          <text x="450" y="120" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Gouda</text>
+          <text x="450" y="135" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Swiss</text>
+
+          <circle cx="630" cy="90" r="7" fill="var(--gold-deep)"/>
+          <text x="630" y="60" text-anchor="middle" font-weight="700">Hard &amp; Aged</text>
+          <text x="630" y="120" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Cheddar</text>
+          <text x="630" y="135" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Parmesan</text>
+
+          <circle cx="810" cy="90" r="7" fill="var(--blue-vein)"/>
+          <text x="810" y="60" text-anchor="middle" font-weight="700">Blue-Veined</text>
+          <text x="810" y="120" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Roquefort</text>
+          <text x="810" y="135" text-anchor="middle" fill="var(--ink-soft)" font-size="11">Gorgonzola</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="glossary">
+  <div class="wrap">
+    <div class="glossary-head">
+      <div>
+        <span class="section-tag">Speak the Language</span>
+        <h2>A Glossary of Cheese Terms</h2>
+      </div>
+      <button id="glossaryToggle" class="glossary-toggle" aria-expanded="false" aria-controls="glossaryBody">
+        <span>Expand</span>
+        <svg class="glossary-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="glossaryBody" class="glossary-body">
+    <dl class="glossary">
+      <div class="gterm"><dt>Affinage</dt><dd>The controlled aging and ripening process that develops a cheese's final flavor and texture.</dd></div>
+      <div class="gterm"><dt>Bloomy Rind</dt><dd>A soft, white, edible mold rind (e.g. Brie, Camembert) that ripens the cheese from the outside in.</dd></div>
+      <div class="gterm"><dt>Brine</dt><dd>A salt-water solution used to wash, preserve, or firm certain cheeses such as Feta and Halloumi.</dd></div>
+      <div class="gterm"><dt>Casein</dt><dd>The primary milk protein that coagulates to form curd during cheesemaking.</dd></div>
+      <div class="gterm"><dt>Curd</dt><dd>The solid part of milk that separates from the whey once it coagulates — the raw material of all cheese.</dd></div>
+      <div class="gterm"><dt>Culture (Starter)</dt><dd>Live bacteria added to milk to begin fermentation and develop flavor.</dd></div>
+      <div class="gterm"><dt>Emmental Eyes</dt><dd>The characteristic large holes in Swiss-style cheeses, formed by trapped carbon dioxide gas.</dd></div>
+      <div class="gterm"><dt>Mold-Ripened</dt><dd>Cheese that develops flavor and texture through the action of introduced mold cultures, inside or on the rind.</dd></div>
+      <div class="gterm"><dt>Pasteurization</dt><dd>Heat-treating milk to eliminate harmful bacteria before cheesemaking.</dd></div>
+      <div class="gterm"><dt>PDO / AOC</dt><dd>Protected designation labels (Protected Designation of Origin / Appellation d'Origine Contrôlée) that restrict a cheese name to a specific region and method.</dd></div>
+      <div class="gterm"><dt>Raw Milk</dt><dd>Unpasteurized milk, sometimes used for artisanal cheeses to preserve natural flavor complexity.</dd></div>
+      <div class="gterm"><dt>Rennet</dt><dd>An enzyme (animal, microbial, or plant-based) used to coagulate milk into curds.</dd></div>
+      <div class="gterm"><dt>Rind</dt><dd>The cheese's outer layer, which may be edible (bloomy, washed) or inedible (waxed, natural).</dd></div>
+      <div class="gterm"><dt>Ripening</dt><dd>The aging period during which flavor, aroma, and texture continue to develop after the cheese is formed.</dd></div>
+      <div class="gterm"><dt>Semi-Soft</dt><dd>A texture category between fresh and semi-hard — pliable, moderate moisture, easy-melting.</dd></div>
+      <div class="gterm"><dt>Terroir</dt><dd>The combined effect of a region's soil, climate, and pasture on a cheese's character.</dd></div>
+      <div class="gterm"><dt>Veining</dt><dd>The blue-green marbling in blue cheeses, produced by Penicillium mold cultures.</dd></div>
+      <div class="gterm"><dt>Washed Rind</dt><dd>A rind regularly bathed in brine, wine, or spirits during aging, producing a pungent aroma and orange hue.</dd></div>
+      <div class="gterm"><dt>Wheel</dt><dd>The traditional cylindrical form in which many cheeses are aged and sold.</dd></div>
+      <div class="gterm"><dt>Whey</dt><dd>The liquid left behind after curds form — the base ingredient for cheeses like Ricotta.</dd></div>
+      <div class="gterm"><dt>Zigzag Rind</dt><dd>A decorative rind pattern pressed into certain hard cheeses, such as Manchego, from traditional esparto grass molds.</dd></div>
+    </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="credit">Compiled by Kamal Kant Gautam</div>
+  </div>
+</footer>
+
+<div class="float-actions">
+  <button id="qaBtn" aria-label="Ask a question">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 10.5h8M8 14h5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M4 5h16v11H9l-4 4V5Z" stroke="#fff" stroke-width="2" stroke-linejoin="round" fill="none"/></svg>
+  </button>
+  <button id="backtotop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<div id="qaOverlay" class="qa-overlay">
+  <div class="qa-modal" role="dialog" aria-modal="true" aria-labelledby="qaTitle">
+    <button id="qaClose" class="qa-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <h3 id="qaTitle">Have a question or request?</h3>
+    <p class="qa-sub">Drop a note below — it goes directly to Kamal and no one else can see it.</p>
+    <form id="qaForm">
+      <label class="qa-label" for="qaName">Name</label>
+      <input class="qa-input" type="text" id="qaName" name="name" required placeholder="Your name">
+      <label class="qa-label" for="qaQuery">Your question or request</label>
+      <textarea class="qa-input qa-textarea" id="qaQuery" name="query" required placeholder="Type your query here..."></textarea>
+      <button type="submit" class="qa-send" id="qaSendBtn">Send</button>
+      <div id="qaStatus" class="qa-status"></div>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
