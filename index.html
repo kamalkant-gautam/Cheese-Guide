@@ -1041,6 +1041,8 @@
     <form id="qaForm">
       <label class="qa-label" for="qaName">Name</label>
       <input class="qa-input" type="text" id="qaName" name="name" required placeholder="Your name">
+      <label class="qa-label" for="qaEmail">Email</label>
+      <input class="qa-input" type="email" id="qaEmail" name="email" required placeholder="you@example.com">
       <label class="qa-label" for="qaQuery">Your question or request</label>
       <textarea class="qa-input qa-textarea" id="qaQuery" name="query" required placeholder="Type your query here..."></textarea>
       <button type="submit" class="qa-send" id="qaSendBtn">Send</button>
@@ -1068,10 +1070,11 @@
   });
   backBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
 
-  // Q&A modal — connected to Kamal's Formspree endpoint.
-  // Every submission is emailed straight to the inbox tied to this Formspree
-  // account and saved in its private dashboard — no one else can see or access it.
-  const QA_FORM_ENDPOINT = "https://formspree.io/f/mjvkgrej";
+  // Q&A modal — connected to Kamal's Web3Forms endpoint.
+  // Every submission is emailed straight to the inbox tied to this access key —
+  // no one else can see or access it.
+  const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+  const WEB3FORMS_ACCESS_KEY = "62a0868a-a733-4151-9a07-df85e49ea0cb";
 
   const qaBtn = document.getElementById('qaBtn');
   const qaOverlay = document.getElementById('qaOverlay');
@@ -1091,8 +1094,9 @@
   qaForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = document.getElementById('qaName').value.trim();
+    const email = document.getElementById('qaEmail').value.trim();
     const query = document.getElementById('qaQuery').value.trim();
-    if(!name || !query) return;
+    if(!name || !email || !query) return;
 
     qaSendBtn.disabled = true;
     qaSendBtn.textContent = 'Sending...';
@@ -1100,23 +1104,27 @@
     qaStatus.className = 'qa-status';
 
     try{
-      if(QA_FORM_ENDPOINT.includes('YOUR_FORM_ID')){
-        throw new Error('not-configured');
-      }
-      const res = await fetch(QA_FORM_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, query, page: 'Cheese Guide' })
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name,
+          email,
+          message: query,
+          subject: 'Cheese Guide — Query from ' + name
+        })
       });
-      if(!res.ok) throw new Error('send-failed');
+      const data = await res.json();
+      if(!res.ok || !data.success) throw new Error('send-failed');
       qaStatus.textContent = 'Thanks — your query has been sent.';
       qaStatus.classList.add('ok');
       qaForm.reset();
       setTimeout(closeQA, 1600);
     } catch(err){
-      // Fallback: open a pre-filled email so nothing gets lost even before setup
+      // Fallback: open a pre-filled email so nothing gets lost if the request fails
       const subject = encodeURIComponent('Cheese Guide — Query from ' + name);
-      const body = encodeURIComponent(query + '\n\n— ' + name);
+      const body = encodeURIComponent(query + '\n\n— ' + name + ' (' + email + ')');
       qaStatus.textContent = 'Could not submit online — opening your email app instead.';
       qaStatus.classList.add('err');
       window.location.href = `mailto:?subject=${subject}&body=${body}`;
